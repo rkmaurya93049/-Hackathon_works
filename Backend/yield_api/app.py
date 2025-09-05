@@ -5,7 +5,7 @@ import pandas as pd
 from fastapi.middleware.cors import CORSMiddleware
 
 # Loading the model and encoder 
-model=joblib.load('Backend/yield_api/models/target_encoder.pkl')
+model=joblib.load('Backend/yield_api/models/xgb_yield_model.pkl')
 encoder=joblib.load('Backend/yield_api/models/target_encoder.pkl')
 
 app = FastAPI()
@@ -51,3 +51,4 @@ app.add_middleware(
     allow_headers=["*"],
 
 )
+
