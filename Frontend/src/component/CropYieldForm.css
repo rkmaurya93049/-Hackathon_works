@@ -1,0 +1,268 @@
+.form-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url("D:/project/Soil_Buddy/crop-yield-frontend/public/background2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+.form-card {
+  margin-top: 70px;
+  max-width: 1000px;
+  width: 90%;
+  min-height: 600px;
+  position: relative;
+  background-image: url("D:/project/Soil_Buddy/crop-yield-frontend/public/MainDIalogueBoxDesigned.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  padding: 130px;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #e3e9ef;
+  margin-bottom: 25px;
+}
+
+.form-card .form-row,
+.weather-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-card label,
+.weather-item label {
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff9f9;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+
+
+.form-card input,
+.form-card select,
+.weather-item input,
+.weather-item select 
+{
+  padding: 10px 12px;
+  border: 3px solid gold;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  background: grey;
+  color: gold;
+
+}
+
+.form-card input:focus,
+.form-card select:focus,
+.weather-item input:focus,
+.weather-item select:focus {
+  border-color: #2980b9;
+  
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+}
+
+.toggle {
+  width: 50px;
+  height: 24px;
+  background: #ddd;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.toggle.active {
+  background: #27ae60;
+}
+
+.toggle.active::before {
+  transform: translateX(26px);
+}
+
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.toggle-icon {
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.weather-item h5 {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 4px;
+  color: #fff;
+}
+
+.submit-btn {
+  max-width: 800px;
+  width: 200px;
+  padding: 12px;
+  background: #2ecc71;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.location-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.location-input input {
+  flex: 1;
+}
+
+.location-btn {
+  padding: 6px 12px;
+  background: #3498db;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 4px;
+  align-self: flex-start;
+  transition: 0.2s;
+}
+
+.location-btn:hover {
+  background: #2980b9;
+}
+
+@media (max-width: 992px) {
+  .form-card .form-row,
+  .weather-row {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-card .form-row,
+  .weather-row {
+    grid-template-columns: 1fr;
+  }
+
+  .toggle-wrapper {
+    gap: 8px;
+  }
+
+  .toggle-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .toggle {
+    width: 45px;
+    height: 22px;
+  }
+
+  .toggle::before {
+    width: 18px;
+    height: 18px;
+  }
+
+  .toggle.active::before {
+    transform: translateX(23px);
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-card {
+    padding: 15px;
+  }
+
+  .form-card .form-row,
+  .weather-row {
+    padding: 0 10px;
+  }
+
+  .form-title {
+    font-size: 22px;
+  }
+
+  .toggle-wrapper {
+    gap: 6px;
+  }
+
+  .toggle-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .toggle {
+    width: 40px;
+    height: 20px;
+  }
+
+  .toggle::before {
+    width: 16px;
+    height: 16px;
+  }
+
+  .toggle.active::before {
+    transform: translateX(20px);
+  }
+}

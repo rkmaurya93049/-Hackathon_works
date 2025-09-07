@@ -1,0 +1,158 @@
+.output-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url("D:\project\Soil_Buddy\crop-yield-frontend\public\background2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.output-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+.output-card {
+  margin-top: 70px;
+  max-width: 1000px;
+  width: 90%;
+  min-height: 600px;
+  position: relative;
+  background-image: url("D:\project\Soil_Buddy\crop-yield-frontend\public\MainDialogueBox.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  padding: 40px 35px;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.output-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+}
+
+.left-column,
+.right-column {
+  flex: 1 1 45%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.output-title {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+
+.result-box {
+  border: 2px solid #ffd700;
+  border-radius: 12px;
+  padding: 15px;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: bold;
+  color: #fff;
+  background: rgba(255, 215, 0, 0.05);
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.response-box {
+  border: 2px solid #ffd700;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  background: rgba(255, 215, 0, 0.05);
+  word-wrap: break-word;
+}
+
+.response-box h3 {
+  font-size: clamp(14px, 2vw, 18px);
+  margin-bottom: 12px;
+  text-decoration: underline;
+  color: #fff;
+}
+
+.chart-box {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.chart-box img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+}
+
+.response-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.response-item span:first-child {
+  font-weight: 600;
+}
+
+
+.submit-btn {
+  background: linear-gradient(90deg, #ffd700, #ffb400);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: clamp(14px, 2.5vw, 18px);
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0px 6px 15px rgba(255, 215, 0, 0.7);
+}
+
+@media screen and (max-width: 1024px) {
+  .left-column,
+  .right-column {
+    flex: 1 1 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .output-grid {
+    flex-direction: column;
+  }
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+}

@@ -1,0 +1,232 @@
+.about-container {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #1c2540 100%);
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  color: #fff;
+  background-image: url("D:/project/Soil_Buddy/crop-yield-frontend/public/background2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  gap: 20px;
+  
+}
+
+.about-header::before {
+  content: "";
+  position: absolute;
+  height: 385px;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.9));
+  z-index: 1;
+}
+
+.about-header .about-text {
+  margin-top: 30px;
+  flex: 2;
+  max-width: 900px;
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.about-header p {
+  line-height: 1.7;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.about-header .about-logo {
+  margin-top: 30px;
+  flex: 1;
+  max-width: 160px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-header .about-logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.team-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  margin: 40px 0;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid #e0a500;
+  border-radius: 12px;
+  padding: 20px;
+  background: #1c2540;
+  flex-wrap: wrap;
+}
+
+.team-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.team-image {
+  flex: 1;
+  text-align: center;
+}
+
+.team-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #e0a500;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.icon-img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #e0a500;
+  padding: 2px;
+  background: #fff;
+  transition: transform 0.2s ease;
+}
+
+.icon-img:hover {
+  transform: scale(1.2);
+}
+
+.team-info {
+  flex: 2;
+}
+
+.team-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.team-info h3 {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: #ffd700;
+}
+
+.team-info p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Large Tablets */
+@media (max-width: 1024px) {
+  .about-header {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .about-header .about-text {
+    max-width: 100%;
+  }
+
+  .about-header .about-logo {
+    justify-content: center;
+    margin-top: 20px;
+    max-width: 140px;
+  }
+
+  .team-image img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .icon-img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Tablets & Large Phones */
+@media (max-width: 768px) {
+  .team-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team-card.reverse {
+    flex-direction: column;
+  }
+
+  .team-info,
+  .team-image {
+    flex: unset;
+  }
+
+  .team-image img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .icon-img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-header p {
+    font-size: 0.9rem;
+  }
+
+  .team-image img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .icon-img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .team-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .team-info p {
+    font-size: 0.85rem;
+  }
+}

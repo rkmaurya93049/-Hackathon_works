@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+ 
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+   background: url("D:\project\Soil_Buddy\crop-yield-frontend\public\LogInBG.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+ 
+}
+
+.login-box {
+   margin-top: 100px;
+  display: flex;
+  max-width: 800px;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  border-radius: 30px;
+  border: solid gold;
+  overflow: hidden;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-section {
+  flex: 1;
+  padding: 40px;
+}
+
+.form-section h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.welcome-text {
+  margin: 8px 0 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-section input {
+  padding: 12px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  outline: none;
+}
+
+.forgot-link {
+  font-size: 12px;
+  color: #f4c20d;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  background: #f4c20d;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #d9a900;
+}
+
+.image-section {
+  flex: 1;
+  background: #f4c20d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .login-box {
+    flex-direction: column;
+  }
+
+  .image-section {
+    display: none;
+  }
+}
